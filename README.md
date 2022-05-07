@@ -1,2 +1,2 @@
-# Get-over-a-break-up
-if you broke up with your girlfriends send her this website
+# Snake
+Snake game, written in p5.js

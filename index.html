@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake game</title>
+	<script defer src="sketche.js"></script>
+	<script defer src="p5.js"></script>
+	<script defer src="snake.js"></script>
+</head>
+<body onload="show('infos','size','maker')">
+<br>
+
+<script>
+	alert("Please press F11 on your keyboard to enter full-screen.")
+	function show(page1, page2,page3){
+		var page = document.getElementById(page1);
+		var page2 = document.getElementById(page2);
+		var page3 = document.getElementById(page3);
+		page.style.display="block";
+		page2.style.display="none";
+		page3.style.display="none";
+	}
+</script>
+
+<div id="infos" class="infos">
+	<h1 style="font-family: arial;">Hey</h1>
+	<p style="margin-left: 10px;font-family: arial;">Welcome to the snake game<br>, this game is made with <br>JS,HTML,CSS, i used p5.js , <br>its a framework <br>to make games and a <br>lot of graphics in js</p>
+	<span style="text-decoration: none;color:black;cursor:pointer;" onclick="show('size','infos')">Control Size ></span>
+	<br><br>
+	<button onclick="one()">The golden apple</button>
+	<br><br>
+	<div id="golden" style="width:20px;height:20px;background:#FFD500;margin-top: 5px;transition: 0.3s;border:2px solid black;"></div>
+	<br><br>
+	<button onclick="two()">Normal apple</button>
+	<br><br>
+	<div id="red" style="width:20px;height:20px;background:#FF0D00;margin-top: 5px;transition: 0.3s;border:2px solid black;"></div>
+	<br><br>
+</div>
+
+<style>
+	*{
+		font-family: arial;
+	}
+	#golden:hover{
+		width:30px;
+		height:30px;
+		transition: 0.2s;
+		padding:5px;
+	}
+	#red:hover{
+		width:30px;
+		height:30px;
+		transition: 0.2s;
+		padding:5px;
+	}
+	button{
+		border:none;
+		padding:5px;
+		background:#13E232;
+		color:white;
+		transition: 0.2s;
+	}
+	button:hover{
+		padding:8px;
+		background: #35ED51;
+		cursor: pointer;
+		border: 1px solid #00DE22;
+		border-radius: 20px;
+		transition: 0.3s;
+	}
+</style>
+
+<div id="size" class="size">
+	<h1>Control size</h1>
+	<span style="cursor:pointer;" onclick="show('infos','size')"> < Back</span>
+	<br><br>
+	<span style="cursor:pointer;width:20px;height:20px;background:#35ED51;padding:5px;" onclick="size(20)">20</span>
+	<span style="cursor:pointer;width:20px;height:20px;background:#35ED51;padding:5px;" onclick="size(10)">10</span>
+	<span style="cursor:pointer;width:20px;height:20px;background:#35ED51;padding:5px;" onclick="size(5)">5</span>
+	<br><br>
+	<span onclick="show('maker','infos','size')" style="cursor:pointer;">Creator ></span>
+</div>
+<div id="maker">
+	<h1>credits</h1>
+	<span style="cursor:pointer;" onclick="show('size','maker','infos')"> < Back</span>
+	<br><br>
+	<p>This game was made by <br>mustapha <br>Copyright 2021-2022</p>
+</div>
+</body>
+</html>
